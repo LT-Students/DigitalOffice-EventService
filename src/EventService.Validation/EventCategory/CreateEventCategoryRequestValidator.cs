@@ -17,14 +17,14 @@ public class CreateEventCategoryRequestValidator : AbstractValidator<CreateEvent
       .MustAsync(async (eventId, _) => await eventRepository.DoesExistAsync(eventId))
       .WithMessage("This event doesn't exist.");
 
-    RuleFor(x => x.CategoryIds)
+    RuleFor(x => x.CategoriesIds)
       .Must(categoryRepository.DoesExistAllAsync)
       .WithMessage("Some of categories in the list doesn't exist.");
 
     RuleFor(x => x)
-      .Must(ec=>!eventCategoryRepository.DoesExistAsync(ec.EventId, ec.CategoryIds))
+      .Must(ec=>!eventCategoryRepository.DoesExistAsync(ec.EventId, ec.CategoriesIds))
       .WithMessage("This event already belongs to this category.")
-      .MustAsync(async (ec, _) => await eventCategoryRepository.CountCategoriesAsync(ec.EventId) + ec.CategoryIds.Count < 6)
+      .MustAsync(async (ec, _) => await eventCategoryRepository.CountCategoriesAsync(ec.EventId) + ec.CategoriesIds.Count < 6)
       .WithMessage("This event already has 5 categories.");
   }
 }

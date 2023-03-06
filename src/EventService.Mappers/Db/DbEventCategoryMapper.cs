@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using LT.DigitalOffice.EventService.Mappers.Db.Interfaces;
 using LT.DigitalOffice.EventService.Models.Db;
+using LT.DigitalOffice.EventService.Models.Dto.Requests.Event;
 using LT.DigitalOffice.EventService.Models.Dto.Requests.EventCategory;
 using LT.DigitalOffice.Kernel.Extensions;
 using Microsoft.AspNetCore.Http;
@@ -22,7 +23,7 @@ public class DbEventCategoryMapper : IDbEventCategoryMapper
   {
     return request is null
       ? null
-      : request.CategoryIds.Select(categoryId => new DbEventCategory
+      : request.CategoriesIds.Select(categoryId => new DbEventCategory
       {
         Id = Guid.NewGuid(),
         EventId = request.EventId,

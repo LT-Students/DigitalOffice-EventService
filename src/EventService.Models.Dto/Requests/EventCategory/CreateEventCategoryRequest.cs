@@ -8,5 +8,5 @@ public class CreateEventCategoryRequest
 {
   public Guid EventId { get; set; }
   [Required]
-  public List<Guid> CategoryIds { get; set; }
+  public List<Guid> CategoriesIds { get; set; }
 }

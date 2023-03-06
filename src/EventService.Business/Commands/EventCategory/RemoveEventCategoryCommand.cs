@@ -54,7 +54,7 @@ public class RemoveEventCategoryCommand : IRemoveEventCategoryCommand
 
     OperationResultResponse<bool> response = new()
     {
-      Body = await _repository.RemoveAsync(request.EventId, request.EventCategoriesIds)
+      Body = await _repository.RemoveAsync(request.EventId, request.CategoriesIds)
     };
 
     if (!response.Body)

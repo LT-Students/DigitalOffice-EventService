@@ -34,6 +34,6 @@ public class DbEventUserConfiguration : IEntityTypeConfiguration<DbEventUser>
 
     builder
       .HasOne(eu => eu.Event)
-      .WithMany(e => e.Users);
+      .WithMany(e => e.EventUsers);
   }
 }

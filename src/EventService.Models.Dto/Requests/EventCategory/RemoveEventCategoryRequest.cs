@@ -8,5 +8,5 @@ public class RemoveEventCategoryRequest
 {
   public Guid EventId { get; set; }
   [Required]
-  public List<Guid> EventCategoriesIds { get; set; }
+  public List<Guid> CategoriesIds { get; set; }
 }

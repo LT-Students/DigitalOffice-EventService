@@ -1,5 +1,4 @@
 ﻿using System;
-using EventService.Data.Provider.MsSql.Ef;
 using LT.DigitalOffice.EventService.Models.Db;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;

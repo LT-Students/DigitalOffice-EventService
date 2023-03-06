@@ -1,9 +1,8 @@
 ﻿using System.Threading.Tasks;
-using LT.DigitalOffice.EventService.Data.Provider;
 using LT.DigitalOffice.EventService.Models.Db;
 using Microsoft.EntityFrameworkCore;
 
-namespace EventService.Data.Provider.MsSql.Ef;
+namespace LT.DigitalOffice.EventService.Data.Provider.MsSql.Ef;
 
 public class EventServiceDbContext : DbContext, IDataProvider
 {
@@ -35,7 +34,6 @@ public class EventServiceDbContext : DbContext, IDataProvider
     Entry(obj).State = EntityState.Detached;
 
     return Entry(obj).State;
-
   }
 
   public void EnsureDeleted()
