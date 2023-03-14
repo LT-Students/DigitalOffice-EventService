@@ -33,6 +33,7 @@ public class CreateEventUserCommand : ICreateEventUserCommand
   private readonly IEventRepository _eventRepository;
   private readonly IEmailService _emailService;
   private readonly IUserService _userService;
+  
   public CreateEventUserCommand(
     IAccessValidator accessValidator,
     IEventUserRepository repository,

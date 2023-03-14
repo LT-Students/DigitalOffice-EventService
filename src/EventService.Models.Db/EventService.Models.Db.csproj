@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="$(ProjectDir)..\..\Common.Configurations.targets" />
+    <Import Project="$(ProjectDir)..\..\Common.Configurations.targets"/>
 
-  <ItemGroup>
-    <ProjectReference Include="..\EventService.Models.Dto\EventService.Models.Dto.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\EventService.Models.Dto\EventService.Models.Dto.csproj"/>
+    </ItemGroup>
 
 </Project>

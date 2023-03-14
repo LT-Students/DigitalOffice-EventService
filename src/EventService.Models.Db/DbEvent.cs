@@ -9,7 +9,6 @@ namespace LT.DigitalOffice.EventService.Models.Db;
 public class DbEvent
 {
   public const string TableName = "Events";
-
   public Guid Id { get; set; }
   public string Name { get; set; }
   public string Address { get; set; }
@@ -28,7 +27,7 @@ public class DbEvent
   public ICollection<DbEventImage> Images { get; set; }
   public ICollection<DbEventUser> Users { get; set; }
   public ICollection<DbEventComment> Comments { get; set; }
-
+  
   public DbEvent()
   {
     EventsCategories = new HashSet<DbEventCategory>();
@@ -43,7 +42,7 @@ public class DbEvent
     public void Configure(EntityTypeBuilder<DbEvent> builder)
     {
       builder
-        .ToTable(DbEvent.TableName);
+        .ToTable(TableName);
 
       builder
         .HasKey(t => t.Id);

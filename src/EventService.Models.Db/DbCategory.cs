@@ -12,7 +12,7 @@ public class DbCategory
 
   public Guid Id { get; set; }
   public string Name { get; set; }
-  public Color Color { get; set; }
+  public CategoryColor Color { get; set; }
   public bool IsActive { get; set; }
   public Guid CreatedBy { get; set; }
   public DateTime CreatedAtUtc { get; set; }

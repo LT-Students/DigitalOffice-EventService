@@ -1,6 +1,6 @@
 ﻿namespace LT.DigitalOffice.EventService.Models.Dto.Enums;
 
-public enum Color
+public enum CategoryColor
 {
   Color01,
   Color02,
@@ -13,5 +13,5 @@ public enum Color
   Color09,
   Color10,
   Color11,
-  Color12,
+  Color12
 }
